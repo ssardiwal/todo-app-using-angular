@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>To-Do App Using Angular</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script src="app.js"></script>
+
+    <body>
+        <div class="container-fluid" id="main">
+            <div class="container" id="container">
+                <div ng-app="todoapp" ng-controller="todocontroller" id="todo">
+                    <div class="headingcontainer text-center">
+                        <h1 class="text-white fw-bold">To-Do App!</h1>
+                        <h6 class="text-white fw-bold">Add New To-Do</h6>
+                    </div>
+                    <form>
+                        <input ng-model="title" placeholder="Add new task...">
+                        <button ng-click="addtask()" id="addbtn">Add</button>
+                    </form>
+                    <ul>
+                        <li ng-repeat="t in todotasks">{{ t }}
+                            <button ng-click="removetask()" id="removebtn">X</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://www.instagram.com/sagar_sardiwal/"><i class="fab fa-instagram m-2"></i></a>
+        </div>
+    </body>
+</html>
